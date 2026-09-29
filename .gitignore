@@ -1,0 +1,39 @@
+.DS_Store
+docs/ai_plans/
+*.zip
+
+# Local credentials and environment overrides; share only sanitized examples.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.local.json
+*.pem
+*.key
+/credentials/
+/secrets/
+
+# Dependencies, caches and generated output.
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.cache/
+/dist/
+/build/
+/coverage/
+*.log
+*.tgz
+
+# Editor and host-specific local settings.
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.claude/settings.local.json
+
+# These public connection and packaging files must remain distributable.
+!/.mcp.json
+!/.claude-plugin/plugin.json
+!/.codex-plugin/plugin.json

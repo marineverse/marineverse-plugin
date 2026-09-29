@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "marineverse": {
+      "type": "http",
+      "url": "https://api.marineverse.com/mcp"
+    }
+  }
+}

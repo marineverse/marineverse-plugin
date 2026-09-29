@@ -1,0 +1,12 @@
+{
+  "name": "marineverse-plugin",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Sail more often. Learn, relax and race with MarineVerse resources, simulator guidance, sailing club discovery and connected sailing progress.",
+  "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
+  "homepage": "https://www.marineverse.com/mcp",
+  "repository": "https://github.com/marineverse/marineverse-plugin",
+  "keywords": ["sailing", "learn to sail", "sailing simulator", "sailboat racing", "sailing clubs", "sailing schools", "MarineVerse"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

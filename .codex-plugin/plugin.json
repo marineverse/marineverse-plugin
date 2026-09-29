@@ -1,0 +1,28 @@
+{
+  "name": "marineverse-plugin",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "description": "Sail more often. Learn, relax and race with MarineVerse resources, simulator guidance, sailing club discovery and connected sailing progress.",
+  "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
+  "homepage": "https://www.marineverse.com/mcp",
+  "repository": "https://github.com/marineverse/marineverse-plugin",
+  "keywords": ["sailing", "learn to sail", "sailing simulator", "sailboat racing", "sailing clubs", "sailing schools", "MarineVerse"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "MarineVerse",
+    "shortDescription": "Sail more often. Learn, relax and race.",
+    "longDescription": "Find your next step in sailing with MarineVerse. Explore ways to learn how to sail, enjoy relaxing virtual sailing and practise racing with a sailing simulator. Read FAQs, release notes and learning links without a MarineVerse account. Connect your account for your sailing progress, statistics, Globe boats and supported races.",
+    "developerName": "MarineVerse",
+    "category": "Lifestyle",
+    "capabilities": ["Write"],
+    "websiteURL": "https://www.marineverse.com/mcp",
+    "privacyPolicyURL": "https://www.marineverse.com/privacy",
+    "termsOfServiceURL": "https://www.marineverse.com/terms-of-service",
+    "defaultPrompt": [
+      "I want to learn how to sail. Where can I start?",
+      "How can I practise sailboat racing in a simulator?",
+      "What should I practise next in MarineVerse?"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+# MarineVerse
+
+**Sail more often. Learn, relax and race.**
+
+Find your next step in sailing: explore learning resources, enjoy virtual
+sailing and practise sailboat racing with a sailing simulator. Read MarineVerse
+FAQs and release notes without an account. Connect your account when you want
+help with your sailing progress, statistics, Globe boats and supported races.
+Find real sailing clubs, schools and Sailability chapters by name, city or nearby coordinates without an account.
+
+Try asking:
+
+- “I dream of sailing around the world. Where can I start learning?”
+- “Can I try sailing in a browser?”
+- “How can I practise racing between trips on the water?”
+- “What changed in MarineVerse Sailing Club?”
+- “Find sailing schools in Melbourne.”
+- “What should I practise next based on my MarineVerse progress?”
+
+## Connect
+
+Follow the current [MarineVerse connection guide](https://www.marineverse.com/mcp).
+The hosted MCP server uses Streamable HTTP:
+
+```text
+https://api.marineverse.com/mcp
+```
+
+Public tools do not require a MarineVerse account. Personal data and writes use
+OAuth account linking through MarineVerse. Available tools depend on the server
+deployment and the assistant's integration; installing this repository does not
+deploy new server capabilities.
+
+## What's in this repository
+
+- `skills/marineverse-mcp/SKILL.md`: shared sailing workflows for Claude and
+  OpenAI assistants, with public guidance and connected-account behavior.
+- `skills/marineverse-clubs/SKILL.md`: guest discovery of real sailing organizations with descriptions and MarineVerse page links.
+
+- `.mcp.json`: the hosted MCP connection; no local executable or credentials.
+- `.claude-plugin/plugin.json`: Claude plugin packaging.
+- `.codex-plugin/plugin.json`: OpenAI plugin packaging and display metadata.
+
+Skills keep their shared instructions short and load linked references only for the requested workflow.
+
+Both manifests use the same skill and MCP configuration. The repository/package
+identifier is `marineverse-plugin`; the display name is **MarineVerse**.
+
+The [MarineVerse CLI](https://github.com/marineverse/marineverse-cli) and its
+[CLI skill](https://github.com/marineverse/marineverse-cli/tree/master/skills/marineverse-cli)
+stay in their own repository. You do not need the CLI to use this plugin.
+
+For local Claude Code testing, run `claude --plugin-dir .` from this repository.
+For OpenAI testing, use the plugin import/developer workflow linked in
+[release guidance](docs/releasing.md). Directory publication is a separate step;
+cloning this repository does not create a public listing.
+
+## Scope
+
+This repository's skills, documentation and plugin configuration are licensed
+under [Apache-2.0](LICENSE). See [NOTICE](NOTICE) for copyright and trademark
+attribution. The license applies to this repository; linked services and content
+retain their own terms.
+
+Public keyword search retrieves first-party FAQs and Sailing Club release history.
+Knowledge base search finds sailing articles, and article lookup reads their full content. Both require an active MarineVerse membership.
+
+MarineVerse is useful for practice; the plugin does not certify sailing ability,
+provide live boat telemetry or make passage-planning decisions.
+
+[Website](https://www.marineverse.com/) ·
+[Learn to sail](https://www.marineverse.com/learn-how-to-sail) ·
+[Practice](https://www.marineverse.com/sailors-mental-gym) ·
+[Support](https://www.marineverse.com/contact)
