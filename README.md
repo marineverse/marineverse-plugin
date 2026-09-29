@@ -7,6 +7,7 @@ sailing and practise sailboat racing with a sailing simulator. Read MarineVerse
 FAQs and release notes without an account. Connect your account when you want
 help with your sailing progress, statistics, Globe boats and supported races.
 Find real sailing clubs, schools and Sailability chapters by name, city or nearby coordinates without an account.
+Link your account to list your clubs and pending requests, request to join a specific club or leave an active membership.
 
 Try asking:
 
@@ -15,6 +16,8 @@ Try asking:
 - “How can I practise racing between trips on the water?”
 - “What changed in MarineVerse Sailing Club?”
 - “Find sailing schools in Melbourne.”
+- “Show my clubs and pending requests.”
+- “Join this club with my introduction.”
 - “What should I practise next based on my MarineVerse progress?”
 
 ## Connect
@@ -35,7 +38,7 @@ deploy new server capabilities.
 
 - `skills/marineverse-mcp/SKILL.md`: shared sailing workflows for Claude and
   OpenAI assistants, with public guidance and connected-account behavior.
-- `skills/marineverse-clubs/SKILL.md`: guest discovery of real sailing organizations with descriptions and MarineVerse page links.
+- `skills/marineverse-clubs/SKILL.md`: guest discovery of real sailing organizations and requested account membership actions.
 
 - `.mcp.json`: the hosted MCP connection; no local executable or credentials.
 - `.claude-plugin/plugin.json`: Claude plugin packaging.

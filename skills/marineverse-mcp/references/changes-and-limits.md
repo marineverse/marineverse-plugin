@@ -5,7 +5,7 @@ degrees, and positions signed latitude/longitude degrees. Preserve seconds on
 race durations and penalties; label any conversion. Preserve timestamp offsets
 unless the user's timezone is known. Missing data is unknown, not zero.
 
-Write tools include `update_boat` and feedback post/comment/vote tools. Read
+Write tools include `update_boat`, club join/leave and feedback post/comment/vote tools. Read
 current state and use returned public identifiers. Make the exact boat change,
 text or vote clear before execution, and obtain confirmation when the user has
 not already authorized that exact action. Respect the host's consent requirements.
