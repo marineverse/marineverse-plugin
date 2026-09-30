@@ -1,0 +1,20 @@
+{
+  "name": "marineverse",
+  "interface": {
+    "displayName": "MarineVerse"
+  },
+  "plugins": [
+    {
+      "name": "marineverse-plugin",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}
