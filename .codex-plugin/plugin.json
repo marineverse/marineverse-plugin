@@ -1,12 +1,23 @@
 {
   "name": "marineverse-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Apache-2.0",
   "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
-  "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
+  "author": {
+    "name": "MarineVerse",
+    "url": "https://www.marineverse.com"
+  },
   "homepage": "https://www.marineverse.com/mcp",
   "repository": "https://github.com/marineverse/marineverse-plugin",
-  "keywords": ["sailing", "learn to sail", "sailing simulator", "sailboat racing", "sailing clubs", "sailing schools", "MarineVerse"],
+  "keywords": [
+    "sailing",
+    "learn to sail",
+    "sailing simulator",
+    "sailboat racing",
+    "sailing clubs",
+    "sailing schools",
+    "MarineVerse"
+  ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
@@ -15,7 +26,10 @@
     "longDescription": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
     "developerName": "MarineVerse",
     "category": "Education & Research",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://www.marineverse.com/mcp",
     "privacyPolicyURL": "https://www.marineverse.com/privacy",
     "termsOfServiceURL": "https://www.marineverse.com/terms-of-service",

@@ -1,6 +1,10 @@
 # OpenAI submission test cases
 
-Exactly five positive and three negative cases for the submission form.
+Additional host acceptance and regression cases. The five positive and three
+negative cases imported by the submission form are in root `plugin.json` under
+`extensions.com.openai.review.test_cases`. That set uses only unsupported sailing
+actions for negative routing tests and keeps fixture-dependent club writes below
+as separate regression coverage.
 These are prepared expectations, not recorded assistant responses or a claim of
 passing host tests. Run each in a fresh conversation on every supported OpenAI
 surface with the plugin enabled. Tool names may have host prefixes.

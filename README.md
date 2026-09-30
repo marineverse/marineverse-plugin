@@ -42,13 +42,15 @@ deploy new server capabilities.
   OpenAI assistants, with public guidance and connected-account behavior.
 - `skills/marineverse-clubs/SKILL.md`: guest discovery of real sailing organizations and requested account membership actions.
 
-- `.mcp.json`: the hosted MCP connection; no local executable or credentials.
+- `plugin.json`: portable Agent Plugins manifest, OpenAI listing and review cases.
+- `mcp.json`: portable Streamable HTTP connection to the hosted MCP server.
+- `.mcp.json`: compatibility connection for Claude and older Codex clients.
 - `.claude-plugin/plugin.json`: Claude plugin packaging.
-- `.codex-plugin/plugin.json`: OpenAI plugin packaging and display metadata.
+- `.codex-plugin/plugin.json`: older Codex packaging and display metadata.
 
 Skills keep their shared instructions short and load linked references only for the requested workflow.
 
-Both manifests use the same skill and MCP configuration. The repository/package
+All manifests use the same skills and hosted MCP endpoint. The repository/package
 identifier is `marineverse-plugin`; the display name is **MarineVerse**.
 
 The [MarineVerse CLI](https://github.com/marineverse/marineverse-cli) and its
@@ -59,6 +61,10 @@ For local Claude Code testing, run `claude --plugin-dir .` from this repository.
 For OpenAI testing, use the plugin import/developer workflow linked in
 [release guidance](docs/releasing.md). Directory publication is a separate step;
 cloning this repository does not create a public listing.
+
+Public release preparation and outstanding publisher inputs are tracked in
+[submission preparation](docs/submission-preparation.md). The current package
+is a preparation draft, not an approved directory release.
 
 ## Scope
 

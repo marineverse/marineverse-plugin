@@ -7,7 +7,9 @@ metadata that describes new tools.
 
 ## Local checks
 
-1. Confirm both manifests point to the existing shared skill and `.mcp.json`.
+1. Confirm the root `plugin.json` and `mcp.json` use the portable Agent Plugins
+   format. Keep identity, version and presentation synchronized with the
+   compatibility manifests; keep both MCP configurations on the same endpoint.
 2. Load the plugin in an assistant with a fresh, disconnected MarineVerse session.
 3. Run the scenarios in [acceptance.md](acceptance.md), then repeat the protected
    cases with a test account. Do not publish account data in test evidence.
@@ -25,11 +27,22 @@ Claude. For a hosted MCP submission, supply the production endpoint and include
 the skill through the portal's supported import/upload flow.
 
 Prepare publisher/domain verification, website/support/privacy/terms links,
-reviewer-ready demo credentials, a demo recording, release notes, per-tool annotation
-justifications, and the five positive and three negative cases in [acceptance.md](acceptance.md).
+reviewer-ready demo credentials, a demo recording, release notes, accurate boolean
+`readOnlyHint`, `openWorldHint` and `destructiveHint` annotations on each tool,
+and the five positive and three negative cases embedded in root `plugin.json`.
+Annotation justifications are not required. Keep the additional consent, write
+and injection scenarios in [acceptance.md](acceptance.md) as regression checks.
 Run the cases and record actual responses before submitting. Submit for review, then publish
 after approval. An imported skill is a release artifact: editing GitHub is not a
 substitute for updating the submitted version.
+
+Finish the listing and publication inputs and real demo recording described in
+[submission preparation](submission-preparation.md) before uploading a final
+bundle. Build a separate upload copy with the root manifests, both skill folders
+and their references, icons, license and notices. Include compatibility manifests
+if needed. Never include `.git`, credentials, root `.app.json`, or any non-null
+`apps` declaration. Do not remove Portal-generated bindings from a finalized
+release. ZIP the single `marineverse-plugin/` directory, then inspect the archive.
 
 See [plugin packaging](https://developers.openai.com/plugins/build/plugins) and
 [reusing a Claude plugin](https://developers.openai.com/plugins/guides/submit-claude-plugin)

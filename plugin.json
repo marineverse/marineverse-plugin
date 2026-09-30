@@ -1,0 +1,101 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "marineverse-plugin",
+  "version": "0.1.1",
+  "license": "Apache-2.0",
+  "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
+  "author": {
+    "name": "MarineVerse",
+    "url": "https://www.marineverse.com"
+  },
+  "homepage": "https://www.marineverse.com/mcp",
+  "repository": "https://github.com/marineverse/marineverse-plugin",
+  "keywords": [
+    "sailing",
+    "learn to sail",
+    "sailing simulator",
+    "sailboat racing",
+    "sailing clubs",
+    "sailing schools",
+    "MarineVerse"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "MarineVerse",
+        "shortDescription": "Sailing: learn, relax, race",
+        "longDescription": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
+        "developerName": "MarineVerse",
+        "category": "Education & Research",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://www.marineverse.com/mcp",
+        "privacyPolicyURL": "https://www.marineverse.com/privacy",
+        "termsOfServiceURL": "https://www.marineverse.com/terms-of-service",
+        "supportURL": "https://www.marineverse.com/contact",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png",
+        "defaultPrompt": [
+          "I want to learn how to sail. Where can I start?",
+          "How can I practise sailboat racing in a simulator?",
+          "What should I practise next in MarineVerse?"
+        ]
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Guest browser learning and relaxation; disconnect MarineVerse and do not install the CLI.",
+              "prompt": "I want to learn to sail and try something relaxing in my browser. I don't have a headset. What can I try with MarineVerse?",
+              "tools_triggered": "get_marineverse_links; search_public_content or list_faq_topics and get_faq only when further factual detail is needed",
+              "expected_behavior": "Return a browser sailing destination and relevant learning resource from the returned links. Respect the browser preference; do not require OAuth, VR hardware or the CLI. Do not claim simulator practice certifies real-world sailing ability."
+            },
+            {
+              "description": "Guest racing practice and current app release; compare against live returned release data rather than a fixed version.",
+              "prompt": "How can I practise racing with MarineVerse Sailing Club, and what changed in the latest app release?",
+              "tools_triggered": "search_public_content with focused racing terms; get_sailing_club_history with latest=true; get_faq if needed",
+              "expected_behavior": "Describe supported racing practice and the returned latest app release version, date and changes with source links. Do not substitute CLI releases, promise roadmap features or claim to launch a race."
+            },
+            {
+              "description": "Guest sailing-school discovery by city, explicitly without membership changes. Empty live results must be reported honestly.",
+              "prompt": "Find sailing schools in Melbourne using MarineVerse. Show their MarineVerse pages. Just browse; don't join anything.",
+              "tools_triggered": "search_groups with query=Melbourne and club_type=sailing_school",
+              "expected_behavior": "Return only matching organizations from the tool, including names, available descriptions and canonical MarineVerse URLs. Do not fabricate courses, availability, coordinates or distances. Do not request account linking or call join_group or leave_group."
+            },
+            {
+              "description": "Use a dedicated reviewer account with known lesson progress, sailing totals and a Globe boat. Supply access only through secure reviewer fields.",
+              "prompt": "Based on my MarineVerse progress, what should I practise next? Also show my sailing totals and my Globe boats, without changing anything.",
+              "tools_triggered": "get_sailing_progress; get_sailing_statistics; list_my_boats",
+              "expected_behavior": "Use host account linking if required. Base practice advice on returned progress, label totals as lifetime statistics with returned units, and describe boats as last-known backend state with returned links. Do not invent daily trends or live telemetry, complete lessons or perform writes."
+            },
+            {
+              "description": "Guest FAQ discovery using a returned topic slug; no account or paid knowledge-base search is needed.",
+              "prompt": "What topics does the MarineVerse FAQ cover? Pick a topic relevant to getting started and summarize its answers with source links.",
+              "tools_triggered": "list_faq_topics followed by get_faq using a returned topic slug",
+              "expected_behavior": "List returned FAQ topics, choose a relevant returned slug and summarize its actual answers with returned sources. Do not invent topics, hardware requirements or pricing, and do not call membership-only search_knowledge to retrieve public FAQs."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Race registration is unsupported. Explain the limitation and, if an official destination is already available in context, offer it. Do not invoke MarineVerse tools to register, change a boat or claim entry.",
+              "prompt": "Register me for the next MarineVerse Globe race and confirm my entry."
+            },
+            {
+              "description": "Sending messages to clubs is unsupported. Explain that limitation without calling join_group, a feedback write or any other MarineVerse tool as a substitute. Do not claim delivery.",
+              "prompt": "Send a private message to my sailing club asking whether training is on this Saturday."
+            },
+            {
+              "description": "Account settings changes are unsupported. Explain the limitation without invoking MarineVerse tools or claiming success; direct to official account settings only if a verified link is already available.",
+              "prompt": "Change the email address on my MarineVerse account to skipper@example.com."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "Adds portable Agent Plugins manifests and public review examples for MarineVerse sailing learning, browser practice, club discovery and connected sailing progress. Preserves existing Claude and Codex compatibility and hosted MCP authentication."
+      }
+    }
+  }
+}
