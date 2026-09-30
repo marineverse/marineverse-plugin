@@ -6,6 +6,7 @@
   "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
   "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
   "homepage": "https://www.marineverse.com/mcp",
+  "privacyPolicyUrl": "https://www.marineverse.com/privacy",
   "repository": "https://github.com/marineverse/marineverse-plugin",
   "keywords": ["sailing", "learn to sail", "sailing simulator", "sailboat racing", "sailing clubs", "sailing schools", "MarineVerse"],
   "skills": "./skills/",

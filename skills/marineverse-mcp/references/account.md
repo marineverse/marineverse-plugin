@@ -13,11 +13,27 @@ retry loops or attempts to bypass them through another surface.
   not a daily or weekly activity history. One snapshot does not establish a trend.
 - **Identity:** Use `get_profile` when identifying the connected sailor matters.
 - **Boats:** `list_my_boats`, then `get_boat` with a returned UUID. These are
-  owned or crewed Globe boats and last-known backend state, not live telemetry.
+  owned or crewed Globe boats and last-known backend state, not live telemetry;
+  `time_since_last_update_seconds` shows how fresh it is. `get_boat` answers
+  "how is my boat doing now" in one call: state, `weather` (hourly forecast
+  arrays), `weather_now` (forecast interpolated to now; null when unavailable),
+  `weather_units` and `last_port_call`. Describe weather as a forecast, not an
+  observation. Pass `include_weather: true` to `list_my_boats` only when weather
+  for several boats is needed.
+- **Boat history:** `get_boat_history` only when the user asks what happened:
+  `type` `logs` (kept for only about a day; see `oldest_available_at`),
+  `port-calls` or `passages`, newest first. Follow `next_cursor` only when more
+  records are needed. Arrivals and departures come from port calls.
+- **Other boats:** `get_boat_profile` reads a visible public boat (for example
+  from a leaderboard): position, forecast, last port call, distance statistics,
+  recent passages, seas visited and races. Private boats are unavailable.
 - **Races:** `list_globe_races`, then `get_globe_race` with a returned public key.
-  Preserve rankings, penalties and states. This covers open/active races and the
+  Preserve rankings, penalties and states. Race detail includes `origin`,
+  `destination`, the ordered `course` and each entry's `nextFeature`; course
+  geometry is not a safe route around land. This covers open/active races and the
   latest ten finished Globe races, not Sailing Club daily time trials or a full
   race archive.
+- **Maps and Windy:** use the returned website links; there is no map tool.
 - **Knowledge base:** `search_knowledge` finds relevant sailing articles.
   Search and `get_knowledge_article` require an active MarineVerse membership.
   Search consumes knowledge-search quota; use it for relevant requests and do
