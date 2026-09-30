@@ -1,0 +1,13 @@
+{
+  "name": "marineverse",
+  "owner": {
+    "name": "MarineVerse"
+  },
+  "plugins": [
+    {
+      "name": "marineverse-plugin",
+      "source": "./",
+      "description": "Sailing: learn, relax, race"
+    }
+  ]
+}
