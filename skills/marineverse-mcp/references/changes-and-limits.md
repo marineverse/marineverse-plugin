@@ -15,6 +15,8 @@ after a successful tool response.
 Boat control permissions vary by role; renaming requires the owner and a Sailing
 Pass. Feedback edits/deletions apply to the user's own content. A feedback
 `downvote` removes the user's prior upvote; it is not a negative vote.
+Deleting a top-level feedback comment also deletes its replies, including replies
+by other people; make that scope clear before obtaining deletion authorization.
 
 Unsupported actions include registering for races, sending messages and changing
 account settings. Offer a relevant official destination when available. The CLI

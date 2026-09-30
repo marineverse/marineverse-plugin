@@ -20,8 +20,12 @@ retry loops or attempts to bypass them through another surface.
   race archive.
 - **Knowledge base:** `search_knowledge` finds relevant sailing articles.
   Search and `get_knowledge_article` require an active MarineVerse membership.
+  Search consumes knowledge-search quota; use it for relevant requests and do
+  not automatically retry an uncertain result.
   `get_knowledge_article` reads a returned article UUID;
   attribute its title and do not invent an article URL.
 - **Feedback:** Find a board with `list_feedback_boards`, browse
   `list_feedback_posts`, and read `get_feedback_post`. Check
   `find_similar_feedback_posts` before proposing a new post.
+  Creating posts or comments publishes as the connected sailor and may notify
+  the MarineVerse community on Discord.

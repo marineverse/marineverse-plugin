@@ -1,8 +1,9 @@
 {
   "name": "marineverse-plugin",
+  "displayName": "MarineVerse",
   "version": "0.1.0",
   "license": "Apache-2.0",
-  "description": "Sail more often. Learn, relax and race with MarineVerse resources, simulator guidance, sailing club discovery and connected sailing progress.",
+  "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
   "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
   "homepage": "https://www.marineverse.com/mcp",
   "repository": "https://github.com/marineverse/marineverse-plugin",

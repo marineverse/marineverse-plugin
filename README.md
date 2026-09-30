@@ -1,6 +1,8 @@
 # MarineVerse
 
-**Sail more often. Learn, relax and race.**
+![MarineVerse](assets/icon.png)
+
+**Sailing: learn, relax, race**
 
 Find your next step in sailing: explore learning resources, enjoy virtual
 sailing and practise sailboat racing with a sailing simulator. Read MarineVerse

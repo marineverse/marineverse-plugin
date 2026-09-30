@@ -24,8 +24,10 @@ The package contains an OpenAI-compatible manifest and the same skill used by
 Claude. For a hosted MCP submission, supply the production endpoint and include
 the skill through the portal's supported import/upload flow.
 
-Prepare publisher/domain verification, privacy and terms links, accurate metadata,
-and reproducible positive and negative test cases. Submit for review, then publish
+Prepare publisher/domain verification, website/support/privacy/terms links,
+reviewer-ready demo credentials, a demo recording, release notes, per-tool annotation
+justifications, and the five positive and three negative cases in [acceptance.md](acceptance.md).
+Run the cases and record actual responses before submitting. Submit for review, then publish
 after approval. An imported skill is a release artifact: editing GitHub is not a
 substitute for updating the submitted version.
 
@@ -34,6 +36,11 @@ See [plugin packaging](https://developers.openai.com/plugins/build/plugins) and
 for current import formats.
 
 ## Claude
+
+The Claude manifest uses top-level `displayName` and `description`. Its
+[manifest reference](https://code.claude.com/docs/en/plugins-reference) does not
+define OpenAI's `interface`, category or image fields. The README displays the
+shared brand image; keep directory-specific branding in Claude's submission form.
 
 The remote **connector** listing makes the hosted MCP server discoverable in
 Claude. Start at [directory submission](https://claude.ai/directory/manage/new)
@@ -46,17 +53,35 @@ that support plugins. This repository provides that package; follow
 separate review/distribution flow. A connector listing and a plugin package are
 related deliverables, not interchangeable registrations.
 
-## Suggested listing copy
+## OpenAI listing copy
 
 **Name:** MarineVerse
 
-**Short description:** Sail more often. Learn, relax and race.
+**Short description:** Sailing: learn, relax, race
 
-**Description:** Find your next step in sailing with MarineVerse. Explore ways
-to learn how to sail, enjoy relaxing virtual sailing and practise racing with a
-sailing simulator. Read FAQs, release notes and learning links without a
-MarineVerse account. Connect your account for your sailing progress, statistics,
-Globe boats and supported races.
+**Description:** MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.
 
-Use screenshots of real workflows and the MarineVerse brand assets selected for
-the submission. Do not advertise future general sailing knowledge tools as live.
+**Category:** Education & Research. This is OpenAI-specific metadata; do not copy
+provider-specific categories or interface fields into the Claude manifest.
+
+Use the bundled MarineVerse brand assets. This MCP server has no custom UI;
+do not submit UI screenshots unless a future server version supplies one.
+See the [submission requirements](https://developers.openai.com/plugins/deploy/submission-errors).
+
+## Optional later: import skills from MCP
+
+Keep this GitHub repository as the source of truth. The server can vendor the
+two skill folders from a pinned release, including their references, rather than
+maintaining a second copy by hand or fetching a moving branch on each request.
+
+OpenAI supports a static subset of the draft skills extension: advertise
+`io.modelcontextprotocol/skills` under `capabilities.extensions`, implement
+`skills/list` and `skills/get`, and serve every declared file through
+`resources/read` with matching SHA-256 digests. This is not yet a stable MCP feature.
+Preserve the sibling skill link when packaging and verify both skills import.
+
+Imports are submission-time snapshots, not automatic runtime skill updates.
+Re-scan and submit a new plugin version after changing them. Keep the existing
+plugin bundle for clients without this extension. This is a future option,
+not a capability of the current MarineVerse server.
+See [OpenAI's skill import contract](https://developers.openai.com/plugins/build/mcp-server#import-skills-from-the-mcp-server).
