@@ -4,6 +4,11 @@
 
 **Sailing: learn, relax, race**
 
+Start real-world sailing with guidance tailored to your experience, location
+and goals: research current lessons, beginner crewing or sailing holidays, then
+use MarineVerse practice before and between outings. Current local research
+depends on the assistant's available web tools; unverified details stay explicit.
+
 Find your next step in sailing: explore learning resources, enjoy virtual
 sailing and practise sailboat racing with a sailing simulator. Read MarineVerse
 FAQs and release notes without an account. Connect your account when you want
@@ -36,8 +41,14 @@ OAuth account linking through MarineVerse. Available tools depend on the server
 deployment and the assistant's integration; installing this repository does not
 deploy new server capabilities.
 
+Use a plugin-capable host to install this plugin and load its skills for the
+beginner workflow. Connecting only to the hosted MCP server provides tools;
+it does not automatically load this repository's sailing-guide skills.
+
 ## What's in this repository
 
+- `skills/start-sailing/SKILL.md`: beginner sailing guidance, current local
+  opportunities, learning pathways and browser/VR practice around real lessons.
 - `skills/marineverse-mcp/SKILL.md`: shared sailing workflows for Claude and
   OpenAI assistants, with public guidance and connected-account behavior.
 - `skills/marineverse-clubs/SKILL.md`: guest discovery of real sailing organizations and requested account membership actions.
@@ -49,6 +60,12 @@ deploy new server capabilities.
 - `.codex-plugin/plugin.json`: older Codex packaging and display metadata.
 
 Skills keep their shared instructions short and load linked references only for the requested workflow.
+
+The [racing reference](skills/marineverse-mcp/references/racing.md) guides public
+race exploration, personal activity and rating explanations, comparisons,
+series, tournaments and today's sailing opportunities. Follow the connected
+host's available tool schemas; this source guide does not establish deployment
+or account access.
 
 All manifests use the same skills and hosted MCP endpoint. The repository/package
 identifier is `marineverse-plugin`; the display name is **MarineVerse**.

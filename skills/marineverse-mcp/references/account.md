@@ -27,12 +27,9 @@ retry loops or attempts to bypass them through another surface.
 - **Other boats:** `get_boat_profile` reads a visible public boat (for example
   from a leaderboard): position, forecast, last port call, distance statistics,
   recent passages, seas visited and races. Private boats are unavailable.
-- **Races:** `list_globe_races`, then `get_globe_race` with a returned public key.
-  Preserve rankings, penalties and states. Race detail includes `origin`,
-  `destination`, the ordered `course` and each entry's `nextFeature`; course
-  geometry is not a safe route around land. This covers open/active races and the
-  latest ten finished Globe races, not Sailing Club daily time trials or a full
-  race archive.
+- **Racing:** For results, personal activity, ratings, comparisons and today's
+  opportunities, read the [racing workflow](racing.md). It covers DRP,
+  multiplayer and Globe, keeping calendar history distinct from lifetime totals.
 - **Maps and Windy:** use the returned website links; there is no map tool.
 - **Knowledge base:** `search_knowledge` finds relevant sailing articles.
   Search and `get_knowledge_article` require an active MarineVerse membership.

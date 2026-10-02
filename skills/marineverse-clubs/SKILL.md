@@ -5,6 +5,10 @@ description: Find real sailing clubs, schools and associations in the public Mar
 
 # Find sailing clubs
 
+For a beginner deciding how to start sailing, use the sibling
+[start-sailing skill](../start-sailing/SKILL.md) for local research and a learning
+pathway. Use this skill for directory discovery or requested membership actions.
+
 Use the guest MCP tool `search_groups` when available. Discover its actual host name and schema. No MarineVerse account is needed. This directory is separate from the MarineVerse Sailing Club simulator app.
 
 Start with the club name or city requested by the user as `query`. For nearby discovery, use paired latitude/longitude supplied by the user or resolved from a trusted place source. Never infer GPS, invent coordinates or fabricate distances. If only a city is known, search its name first.

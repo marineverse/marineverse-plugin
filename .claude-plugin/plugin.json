@@ -1,14 +1,14 @@
 {
   "name": "marineverse-plugin",
   "displayName": "MarineVerse",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "Apache-2.0",
-  "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
+  "description": "Find a practical start in sailing: local lessons, beginner crewing and learning pathways, supported by MarineVerse browser, VR and desktop practice. Learn, relax and race with sailing resources, glossary terms, racing results, rankings, leagues, tournaments and clubs. Connect your account for daily activity, today's practice opportunities, rating explanations, sailing progress, Globe boats and supported club actions.",
   "author": { "name": "MarineVerse", "url": "https://www.marineverse.com" },
   "homepage": "https://www.marineverse.com/mcp",
   "privacyPolicyUrl": "https://www.marineverse.com/privacy",
   "repository": "https://github.com/marineverse/marineverse-plugin",
-  "keywords": ["sailing", "learn to sail", "sailing simulator", "sailboat racing", "sailing clubs", "sailing schools", "MarineVerse"],
+  "keywords": ["sailing", "learn to sail", "beginner sailing", "sailing lessons", "sailing simulator", "sailboat racing", "racing results", "Daily Race Practice", "multiplayer racing", "sailing tournaments", "sailing activity", "rating explanations", "sailing glossary", "sailing clubs", "sailing schools", "MarineVerse"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json"
 }

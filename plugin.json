@@ -1,9 +1,9 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "marineverse-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
-  "description": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
+  "description": "Find a practical start in sailing: local lessons, beginner crewing and learning pathways, supported by MarineVerse browser, VR and desktop practice. Learn, relax and race with sailing resources, glossary terms, racing results, rankings, leagues, tournaments and clubs. Connect your account for daily activity, today's practice opportunities, rating explanations, sailing progress, Globe boats and supported club actions.",
   "author": {
     "name": "MarineVerse",
     "url": "https://www.marineverse.com"
@@ -13,8 +13,17 @@
   "keywords": [
     "sailing",
     "learn to sail",
+    "beginner sailing",
+    "sailing lessons",
     "sailing simulator",
     "sailboat racing",
+    "racing results",
+    "Daily Race Practice",
+    "multiplayer racing",
+    "sailing tournaments",
+    "sailing activity",
+    "rating explanations",
+    "sailing glossary",
     "sailing clubs",
     "sailing schools",
     "MarineVerse"
@@ -24,7 +33,7 @@
       "interface": {
         "displayName": "MarineVerse",
         "shortDescription": "Sailing: learn, relax, race",
-        "longDescription": "MarineVerse helps people learn, practise and enjoy sailing through browser, VR and desktop simulation. Explore sailing lessons, racing practice, clubs and schools, or connect your account for progress, statistics, Globe boats and supported club actions.",
+        "longDescription": "Start real-world sailing with guidance tailored to your experience, location and goals: current local lessons, beginner crewing, holiday and charter pathways, supported by MarineVerse practice before and between outings. Learn, relax and race through browser, VR and desktop sailing simulation. Explore learning resources, sailing glossary definitions, racing practice, public results, rankings, leagues, series, tournaments, community sessions and sailing clubs. Connect your account to review today's or yesterday's sailing activity, find today's practice opportunities, understand rating changes, and access sailing progress, Globe boats and supported club actions. Beginner guidance requires the plugin's skills to be loaded; local research depends on host web tools, and MarineVerse tool availability depends on the connected server.",
         "developerName": "MarineVerse",
         "category": "Education & Research",
         "capabilities": [
@@ -46,6 +55,24 @@
       "review": {
         "test_cases": {
           "positive": [
+            {
+              "description": "Load the start-sailing plugin skill; guest beginner guidance with host web research available. MCP connection alone does not load the skill.",
+              "prompt": "I'm an adult beginner in Melbourne and want to try real sailing. I can travel an hour, have no headset and prefer a browser. Help me find a first lesson.",
+              "tools_triggered": "host web research for official training directories and provider pages; optional search_groups with club_type=sailing_school and query=Melbourne; no OAuth or paid knowledge search",
+              "expected_behavior": "Reuse the known location, experience, travel and browser preference. Ask at most one or two useful follow-up questions if needed, verify current introductory offerings and contacts, distinguish dinghy/yacht instruction and unconfirmed availability, offer a draft inquiry without sending, and suggest browser wind-basics practice without requiring a headset."
+            },
+            {
+              "description": "Load the start-sailing plugin skill; no host web research available. Public MarineVerse tools may be available but are not general web search.",
+              "prompt": "I live far from water and want to learn enough to charter a yacht on holiday. I already have a VR headset. What should I do first?",
+              "tools_triggered": "optional get_marineverse_links or public glossary lookup; no paid knowledge search, OAuth, CLI installation, booking or contact writes",
+              "expected_behavior": "Ask one or two relevant questions progressively about experience, country/destination or headset model and PC when needed. Offer an introductory learning path and travel-course or skippered-holiday research strategy, label current offerings and hardware support unverified, separate legal, competence and operator requirements, and do not prescribe a new headset or guarantee charter readiness."
+            },
+            {
+              "description": "Load the start-sailing plugin skill for real-world club racing; verify current club options through host web research when available.",
+              "prompt": "I've had a few dinghy lessons and want to try club racing, but I don't own a boat. How do I start?",
+              "tools_triggered": "host web research for club beginner opportunities and official/event rules; optional search_groups; no join, registration or contact writes",
+              "expected_behavior": "Ask location and crew-versus-helm preference if unknown, prefer a welcoming existing crew with a Start Racing course as an alternative, verify current boat access and beginner opportunities without assuming free membership or entry, offer a draft inquiry, introduce a manageable first outing and applicable rules sources, and distinguish real club racing from MarineVerse simulator results."
+            },
             {
               "description": "Guest browser learning and relaxation; disconnect MarineVerse and do not install the CLI.",
               "prompt": "I want to learn to sail and try something relaxing in my browser. I don't have a headset. What can I try with MarineVerse?",
@@ -94,7 +121,7 @@
         }
       },
       "publication": {
-        "release_notes": "Adds portable Agent Plugins manifests and public review examples for MarineVerse sailing learning, browser practice, club discovery and connected sailing progress. Preserves existing Claude and Codex compatibility and hosted MCP authentication."
+        "release_notes": "Adds a start-sailing skill for current local lessons, beginner crewing, learning and holiday pathways, and MarineVerse practice around real lessons. Also adds racing guidance for public results, rankings, series, tournaments and community sessions; connected today/yesterday activity, today's practice opportunities and rating explanations; and public sailing glossary lookup and search."
       }
     }
   }
