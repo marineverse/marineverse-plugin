@@ -1,0 +1,89 @@
+{
+  "name": "Port & Starboard",
+  "windDirection": 0,
+  "stepCount": 5,
+  "viewport": {
+    "cx": -18.9,
+    "cy": 105.5,
+    "w": 560,
+    "h": 380
+  },
+  "objects": [
+    {
+      "type": "boat",
+      "label": "Starboard",
+      "hullColor": "#1dd733",
+      "frames": {
+        "0": {
+          "x": 160,
+          "y": 240,
+          "bearing": 315
+        },
+        "1": {
+          "x": 115,
+          "y": 195,
+          "bearing": 315
+        },
+        "2": {
+          "x": 70,
+          "y": 150,
+          "bearing": 315
+        },
+        "3": {
+          "x": 25,
+          "y": 105,
+          "bearing": 315
+        },
+        "4": {
+          "x": -20,
+          "y": 60,
+          "bearing": 315
+        }
+      }
+    },
+    {
+      "type": "boat",
+      "label": "Port (keep clear)",
+      "hullColor": "#f43e3e",
+      "frames": {
+        "0": {
+          "x": -160,
+          "y": 240,
+          "bearing": 45
+        },
+        "1": {
+          "x": -115,
+          "y": 195,
+          "bearing": 45
+        },
+        "2": {
+          "x": -70,
+          "y": 150,
+          "bearing": 66.72569506533853
+        },
+        "3": {
+          "x": -18,
+          "y": 137.99456372522104,
+          "bearing": 78.58486176137995
+        },
+        "4": {
+          "x": 50,
+          "y": 84.99588161001594,
+          "bearing": 45
+        }
+      }
+    },
+    {
+      "type": "text",
+      "text": "Port & Starboard",
+      "fontSize": 18,
+      "width": 200,
+      "frames": {
+        "0": {
+          "x": -210,
+          "y": 71.48369117566304
+        }
+      }
+    }
+  ]
+}

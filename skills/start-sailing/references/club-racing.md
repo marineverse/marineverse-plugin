@@ -22,6 +22,10 @@ rules rather than presenting a rulebook wall.
 
 ## Find the rules that actually apply
 
+For an illustrated explanation or reconstruction of a situation, use the
+[sailing-scenarios skill](../../sailing-scenarios/SKILL.md) to share a step-by-step
+diagram. It supports discussion, not automated protest decisions.
+
 Use [World Sailing's racing-rules page](https://www.sailing.org/racingrules)
 to find the current edition, then the event's current Notice of Race and Sailing
 Instructions, local prescriptions and class rules where applicable. Check their

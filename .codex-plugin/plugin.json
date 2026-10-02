@@ -1,8 +1,8 @@
 {
   "name": "marineverse-plugin",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "Apache-2.0",
-  "description": "Find a practical start in sailing: local lessons, beginner crewing and learning pathways, supported by MarineVerse browser, VR and desktop practice. Learn, relax and race with sailing resources, glossary terms, racing results, rankings, leagues, tournaments and clubs. Connect your account for daily activity, today's practice opportunities, rating explanations, sailing progress, Globe boats and supported club actions.",
+  "description": "Find a practical start in sailing: local lessons, beginner crewing and learning pathways, supported by MarineVerse browser, VR and desktop practice. Learn, relax and race with sailing resources, glossary terms, racing results, rankings, leagues, tournaments and clubs. Connect your account for daily activity, today's practice opportunities, rating explanations, sailing progress, Globe boats and supported club actions. Create and share sailing scenarios to explain racing rules, discuss tactics and reconstruct incidents.",
   "author": {
     "name": "MarineVerse",
     "url": "https://www.marineverse.com"
@@ -16,6 +16,8 @@
     "sailing lessons",
     "sailing simulator",
     "sailboat racing",
+    "sailing diagrams",
+    "racing rules",
     "racing results",
     "Daily Race Practice",
     "multiplayer racing",
@@ -32,7 +34,7 @@
   "interface": {
     "displayName": "MarineVerse",
     "shortDescription": "Sailing: learn, relax, race",
-    "longDescription": "Start real-world sailing with guidance tailored to your experience, location and goals: current local lessons, beginner crewing, holiday and charter pathways, supported by MarineVerse practice before and between outings. Learn, relax and race through browser, VR and desktop sailing simulation. Explore learning resources, sailing glossary definitions, racing practice, public results, rankings, leagues, series, tournaments, community sessions and sailing clubs. Connect your account to review today's or yesterday's sailing activity, find today's practice opportunities, understand rating changes, and access sailing progress, Globe boats and supported club actions. Beginner guidance requires the plugin's skills to be loaded; local research depends on host web tools, and MarineVerse tool availability depends on the connected server.",
+    "longDescription": "Start real-world sailing with guidance tailored to your experience, location and goals: current local lessons, beginner crewing, holiday and charter pathways, supported by MarineVerse practice before and between outings. Learn, relax and race through browser, VR and desktop sailing simulation. Explore learning resources, sailing glossary definitions, racing practice, public results, rankings, leagues, series, tournaments, community sessions and sailing clubs. Connect your account to review today's or yesterday's sailing activity, find today's practice opportunities, understand rating changes, and access sailing progress, Globe boats and supported club actions. Beginner guidance requires the plugin's skills to be loaded; local research depends on host web tools, and MarineVerse tool availability depends on the connected server. Use the sailing-scenarios skill to create, explain and revise shareable step-by-step canvas diagrams for rules, tactics and incident reconstruction. Preset links work without login; custom scene generation uses a bundled local Node.js helper.",
     "developerName": "MarineVerse",
     "category": "Education & Research",
     "capabilities": [

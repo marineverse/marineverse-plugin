@@ -47,6 +47,8 @@ it does not automatically load this repository's sailing-guide skills.
 
 ## What's in this repository
 
+- `skills/sailing-scenarios/SKILL.md`: create, explain and revise shareable
+  racing-rules and tactics diagrams, with scene examples and a local URL helper.
 - `skills/start-sailing/SKILL.md`: beginner sailing guidance, current local
   opportunities, learning pathways and browser/VR practice around real lessons.
 - `skills/marineverse-mcp/SKILL.md`: shared sailing workflows for Claude and

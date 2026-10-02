@@ -21,6 +21,7 @@ proof of passage readiness or measured performance improvement.
 
 Read only the relevant details:
 
+- Drawing, explaining or reconstructing a racing situation: use the sibling [sailing-scenarios skill](../sailing-scenarios/SKILL.md).
 - Starting real-world sailing, finding current lessons or beginner crewing, and practice between lessons: use the sibling [start-sailing skill](../start-sailing/SKILL.md).
 - MarineVerse Learn/Relax/Race practice, guest FAQs, sailing glossary, releases and sources: [public guidance](references/public-content.md).
 - Public racing, my results and activity, ratings, comparisons, tournaments and today's opportunities: [racing](references/racing.md).
