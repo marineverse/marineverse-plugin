@@ -27,6 +27,12 @@ retry loops or attempts to bypass them through another surface.
 - **Other boats:** `get_boat_profile` reads a visible public boat (for example
   from a leaderboard): position, forecast, last port call, distance statistics,
   recent passages, seas visited and races. Private boats are unavailable.
+- **Followed boats:** `list_followed_boats` lists the active boats the sailor
+  follows, newest activity first (up to 100), with owner and `profile_url`.
+  `follow_boat` and `unfollow_boat` take a returned `boat_uuid`, for example
+  from a leaderboard; confirm with the user first. Only public boats can be
+  followed through the tool; a private owner's boat is followed on the website
+  through the owner's invite link, and the sailor's own boats cannot be followed.
 - **Racing:** For results, personal activity, ratings, comparisons and today's
   opportunities, read the [racing workflow](racing.md). It covers DRP,
   multiplayer and Globe, keeping calendar history distinct from lifetime totals.

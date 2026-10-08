@@ -26,6 +26,9 @@ replay-storage keys. Follow returned pagination only when more results are
 needed; one recent page is not a complete archive. The older `list_globe_races`
 and `get_globe_race` tools cover open/active and latest ten finished Globe races;
 prefer the paged racing tools when the question needs broader history.
+`get_globe_race` returns a 25-entry leaderboard page with `entries_pagination`;
+entries keep their race-wide `position`. Pass `page` to read further pages only
+when needed.
 
 DRP rankings support `type: rating|wins|streaks`, optional `league_key` (global
 by default), and an exact `date` for rating snapshots. Multiplayer supports
