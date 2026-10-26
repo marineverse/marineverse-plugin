@@ -188,6 +188,23 @@ or entry, offers a draft inquiry, introduces a manageable first outing and
 applicable rules sources, and distinguishes real club racing from MarineVerse
 simulator results.
 
+## Globe anchoring and command regressions
+
+Use the updated server with an isolated test boat and synthetic/local test data.
+These are host acceptance expectations, not a claim of production execution.
+Server contract tests exercise the same MCP calls through the API separately.
+
+| Case | Prompt or injected result | Expected behavior |
+| --- | --- | --- |
+| G1 | “Can my boat anchor here? Don't change it.” | `list_my_boats` as needed, then `get_boat` with `include_anchor_eligibility: true`; report eligibility/reason, current/target rode, bottom contact, permissions and snapshot freshness. Ordinary status reads omit that option. No command or socket. |
+| G2 | “Drop the anchor.” | One authorized `send_boat_command` with `anchor_drop`, current revision and fresh immutable UUID/time. Report deployment in progress, not already secured. Do not lower sails or secure unless asked. |
+| G3 | “Pay out the recommended rode, then secure the anchor.” | `anchor_set_rode` then `anchor_secure`, using the preceding accepted revision. Explain `securing` versus `secured`. If the user only asks to pay out, do not add the second action. |
+| G4 | “Retrieve it.” Server replies `retrieval_requires_approach`. | Preserve receipt and explain approach is needed. No rapid retries or invented successful retrieval. |
+| G5 | Read-only/viewer account asks to anchor; sail-trim account asks to steer. | Capability/policy refusal respected; no WebSocket/master claim, token request or alternate-surface bypass. Sail-trim may change sails/sheets without heading. |
+| G6 | Inject timeout, then a saved receipt; also `stale_revision` and `idempotency_conflict`. | Exact retry retains every argument; never fresh UUID/revision automatically. Report uncertainty/conflict and inspect current state. Do not describe saved receipt as new telemetry. |
+| G8 | New unknown optional state fields, unknown reason, absent eligibility or older deployed tool list. | Known fields still usable. Missing remains unknown. Unknown refusal is not success. Explain unavailable capability instead of inventing an anchor tool or lowering sails as a substitute. |
+| G9 | “Show this followed/public boat.” | Rich state only as returned; no invented private eligibility, crew role or control permission. |
+
 ## Submission gate
 
 Attach actual responses and traces for the five positive and three negative

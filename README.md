@@ -26,6 +26,8 @@ Try asking:
 - “Show my clubs and pending requests.”
 - “Join this club with my introduction.”
 - “What should I practise next based on my MarineVerse progress?”
+- “Can my Globe boat anchor here, and who is simulating it?”
+- “Drop my boat's anchor, then pay out the recommended rode and secure it.”
 
 ## Connect
 
@@ -68,6 +70,14 @@ race exploration, personal activity and rating explanations, comparisons,
 series, tournaments and today's sailing opportunities. Follow the connected
 host's available tool schemas; this source guide does not establish deployment
 or account access.
+
+The [Globe reference](skills/marineverse-mcp/references/globe.md) explains anchor
+eligibility, bottom contact, payout, securing and retrieval, and keeps viewing
+separate from crew control permission. Updated hosted tools expose these backend
+snapshots and accept ordered commands; this plugin does not open a live socket or
+run boat physics. Commands may be accepted while deployment or retrieval is still
+in progress. A rejected or uncertain command is never silently replaced with a
+new one.
 
 All manifests use the same skills and hosted MCP endpoint. The repository/package
 identifier is `marineverse-plugin`; the display name is **MarineVerse**.

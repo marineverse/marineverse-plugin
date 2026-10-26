@@ -5,6 +5,20 @@ FAQ/history content; the CLI owns its separate CLI skill. Keep manifest versions
 in sync when releasing this package. Test the deployed server before submitting
 metadata that describes new tools.
 
+Version 0.1.4 requires the Rails MCP update that exposes `send_boat_command` and
+retains anchor state. Release Rails/workers with the Globe
+migrations and compatible Go support before the website, plugin and CLI;
+verify the live tool schema before distributing this package. Native release
+is optional later. No MCP endpoint, OAuth scopes, plugin
+identity or client secret configuration changes are needed. An existing account
+without `globe_write` must reconnect through the host before controls are used;
+read access alone does not grant control. `update_boat` keeps renaming and legacy
+heading/hoist updates for ordinary unattached boats. Active anchors and explicit
+idempotent retries use `send_boat_command`.
+A new native release is not required for this plugin update.
+Do not claim the new hosted tool is deployed just because this source is
+updated. The Globe acceptance cases remain unrun until host evidence exists.
+
 ## Local checks
 
 1. Confirm the root `plugin.json` and `mcp.json` use the portable Agent Plugins

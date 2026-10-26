@@ -19,7 +19,8 @@ retry loops or attempts to bypass them through another surface.
   arrays), `weather_now` (forecast interpolated to now; null when unavailable),
   `weather_units` and `last_port_call`. Describe weather as a forecast, not an
   observation. Pass `include_weather: true` to `list_my_boats` only when weather
-  for several boats is needed.
+  for several boats is needed. For anchor state, eligibility
+  and authorized controls, read [Globe boats](globe.md).
 - **Boat history:** `get_boat_history` only when the user asks what happened:
   `type` `logs` (kept for only about a day; see `oldest_available_at`),
   `port-calls` or `passages`, newest first. Follow `next_cursor` only when more

@@ -1,6 +1,6 @@
 ---
 name: marineverse-mcp
-description: Explore MarineVerse sailing resources, glossary terms, public racing and browser practice, or use a connected account for racing results, activity, ratings, sailing progress, Globe boats and feedback.
+description: Explore MarineVerse sailing resources, glossary terms, public racing and browser practice, or use a connected account for racing results, activity, ratings, sailing progress, Globe boat state, anchoring, controls and feedback.
 ---
 
 # MarineVerse: learn, relax, race
@@ -26,6 +26,7 @@ Read only the relevant details:
 - MarineVerse Learn/Relax/Race practice, guest FAQs, sailing glossary, releases and sources: [public guidance](references/public-content.md).
 - Public racing, my results and activity, ratings, comparisons, tournaments and today's opportunities: [racing](references/racing.md).
 - Protected progress, statistics, identity, knowledge base and feedback: [account workflows](references/account.md).
+- Globe boat status, anchoring, sail/heading controls and command results: [Globe boats](references/globe.md).
 - Boat and feedback permissions, units and unsupported actions: [changes and limits](references/changes-and-limits.md).
 - Discovering organizations or listing, joining and leaving your clubs: use the sibling [clubs skill](../marineverse-clubs/SKILL.md).
 
@@ -38,5 +39,6 @@ permission and visibility errors without bypasses or retry loops.
 Use returned public identifiers. Account reads, schedules and discovery do not
 authorize writes or join a session. Make the exact requested change clear,
 respect host consent and report only actual results. Never automatically repeat
-an ambiguous write. The CLI is an optional separate interface; do not install it
+an ambiguous write with a new identity; follow the Globe reference for exact
+command retries. The CLI is an optional separate interface; do not install it
 to replace an available MCP tool.
