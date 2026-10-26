@@ -19,8 +19,14 @@ retry loops or attempts to bypass them through another surface.
   arrays), `weather_now` (forecast interpolated to now; null when unavailable),
   `weather_units` and `last_port_call`. Describe weather as a forecast, not an
   observation. Pass `include_weather: true` to `list_my_boats` only when weather
-  for several boats is needed. For anchor state, eligibility
-  and authorized controls, read [Globe boats](globe.md).
+  for several boats is needed. `anchor` is the anchor position, simulated
+  `depth_m` and chain out (`rode_m`), or null when no anchor is down;
+  `is_anchored` is also true when both sails are lowered.
+- **Anchoring:** `anchor_boat` with a returned `boat_uuid` and `rode_m` (0–60 m).
+  With no anchor down, a value above 0 drops it at the boat's position; with one
+  down it lets chain out or takes it in, and taking in pulls the boat toward the
+  anchor. 0 lifts it. Report a refusal reason (`too_far_from_shore`, `on_land`,
+  `reef`, `shoreline_unavailable`) as returned; do not lower sails instead.
 - **Boat history:** `get_boat_history` only when the user asks what happened:
   `type` `logs` (kept for only about a day; see `oldest_available_at`),
   `port-calls` or `passages`, newest first. Follow `next_cursor` only when more

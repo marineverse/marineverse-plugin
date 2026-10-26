@@ -106,7 +106,7 @@
         }
       },
       "publication": {
-        "release_notes": "Adds Globe anchoring and boat-control guidance for rich state, bottom contact, rode payout, securing and retrieval. Uses role-authorized ordered commands and exact retries, preserves server rejection reasons, and distinguishes accepted commands from completed motion. Requires the corresponding hosted MCP update for send_boat_command and richer state; update_boat remains available for ordinary heading/sail-hoist changes and renaming."
+        "release_notes": "Adds Globe anchoring: drop the anchor, let out or take in chain, and lift it with anchor_boat. Boat state includes the anchor position, simulated depth and chain out."
       }
     }
   }
