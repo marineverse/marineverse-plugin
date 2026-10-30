@@ -5,10 +5,11 @@ FAQ/history content; the CLI owns its separate CLI skill. Keep manifest versions
 in sync when releasing this package. Test the deployed server before submitting
 metadata that describes new tools.
 
-Version 0.1.5 describes the Globe electric engine: `engine_on` and
-`engine_throttle` (-1 astern to 1 ahead) on `update_boat`, and the engine and
-battery fields on boats. Release it after the Rails server that exposes them is
-deployed, and check the live tool list first.
+Version 0.1.5 describes the Globe electric motor: `motor_on` and
+`motor_throttle` (-1 astern to 1 ahead) on `update_boat`, and the motor and
+battery fields on boats. `engine_on`/`engine_throttle` remain deprecated
+aliases. Release it after the Rails server that exposes them is deployed, and
+check the live tool list first.
 
 ## Local checks
 

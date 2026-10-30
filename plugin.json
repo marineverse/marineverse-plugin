@@ -106,7 +106,7 @@
         }
       },
       "publication": {
-        "release_notes": "Adds the Globe electric engine: start and stop it and set throttle, including astern, with update_boat. Boat state includes engine status, throttle and battery charge, which comes from solar, regeneration while sailing and shore power in port. Sailing statistics include distance under engine."
+        "release_notes": "Adds the Globe electric motor: start and stop it and set throttle, including astern, with update_boat. Boat state includes motor status, throttle and battery charge, which comes from solar, regeneration while sailing and shore power in port. Sailing statistics include distance under motor."
       }
     }
   }
