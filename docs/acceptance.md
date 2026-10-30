@@ -207,6 +207,25 @@ not lower the sails instead.
 `rode_m: 0`. Reports `anchor: null` afterwards. Does not change sails or heading
 unless asked.
 
+## Globe engine cases
+
+### E1 — Motor out
+
+**Prompt:** “Start the engine on my boat at half throttle.”
+
+**Pass:** Identifies the boat from `list_my_boats`, confirms the change, then
+calls `update_boat` once with `engine_on: true, engine_throttle: 0.5`. Reports
+the returned engine state and battery. A `battery_empty` refusal is reported as
+returned; it does not raise the sails instead.
+
+### E2 — Astern, then stop
+
+**Prompt:** “Go slow astern, then stop the engine.”
+
+**Pass:** After confirmation, one `update_boat` with a negative
+`engine_throttle` (for example -0.3), then one with `engine_on: false`. Does not
+change sails, heading or the anchor unless asked.
+
 ## Submission gate
 
 Attach actual responses and traces for the five positive and three negative

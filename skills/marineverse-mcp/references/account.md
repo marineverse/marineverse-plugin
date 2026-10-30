@@ -27,6 +27,11 @@ retry loops or attempts to bypass them through another surface.
   down it lets chain out or takes it in, and taking in pulls the boat toward the
   anchor. 0 lifts it. Report a refusal reason (`too_far_from_shore`, `on_land`,
   `reef`, `shoreline_unavailable`) as returned; do not lower sails instead.
+- **Engine:** `update_boat` with `engine_on` and/or `engine_throttle` (-1 full
+  astern to 1 full ahead, not a percentage). The electric engine runs on the
+  battery (`battery_energy_wh` of `battery_capacity_wh`), which charges from the
+  sun, from the propeller while sailing and from shore power in port. Starting with an empty battery is refused (`battery_empty`); report it
+  as returned and do not raise sails instead unless asked.
 - **Boat history:** `get_boat_history` only when the user asks what happened:
   `type` `logs` (kept for only about a day; see `oldest_available_at`),
   `port-calls` or `passages`, newest first. Follow `next_cursor` only when more
